@@ -1,0 +1,130 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "cerebras/gpt-oss-120b",
+  "provider": {
+    "cerebras": {
+      "models": {
+        "gpt-oss-120b": {
+          "options": {
+            "reasoningEffort": "low"
+          }
+        }
+      }
+    },
+    "groq": {
+      "models": {
+        "openai/gpt-oss-120b": {
+          "options": {
+            "reasoningEffort": "low"
+          }
+        }
+      }
+    }
+  },
+  "agent": {
+    "build": {
+      "description": "Full read/write access. Implements KRONOS components directly in the codebase. Primary: Cerebras. Backup: Mistral Codestral.",
+      "mode": "primary",
+      "model": "cerebras/gpt-oss-120b",
+      "permission": {
+        "read": "allow",
+        "edit": "allow",
+        "bash": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "webfetch": "allow",
+        "task": "allow",
+        "todowrite": "allow"
+      }
+    },
+    "build-backup": {
+      "description": "Fallback for build if Cerebras is rate-limited. Codestral is Mistral's coding-specific model.",
+      "mode": "primary",
+      "model": "mistral/codestral-latest",
+      "permission": {
+        "read": "allow",
+        "edit": "allow",
+        "bash": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "webfetch": "allow",
+        "task": "allow",
+        "todowrite": "allow"
+      }
+    },
+    "explore": {
+      "description": "Read-only code investigator. Primary: Groq (GPT-OSS 120B). Backup: Mistral.",
+      "mode": "subagent",
+      "model": "groq/openai/gpt-oss-120b",
+      "permission": {
+        "read": "allow",
+        "grep": "allow",
+        "glob": "allow",
+        "bash": "allow",
+        "edit": "deny"
+      }
+    },
+    "explore-backup": {
+      "description": "Fallback for explore if Groq is rate-limited.",
+      "mode": "subagent",
+      "model": "mistral/mistral-small-latest",
+      "permission": {
+        "read": "allow",
+        "grep": "allow",
+        "glob": "allow",
+        "bash": "allow",
+        "edit": "deny"
+      }
+    },
+    "deep-context": {
+      "description": "Big-context agent, 1M context. Primary: Google Gemini. Backup: Mistral (smaller context, use only for moderate-size chunks).",
+      "mode": "subagent",
+      "model": "google/gemini-2.5-flash",
+      "permission": {
+        "read": "allow",
+        "grep": "allow",
+        "glob": "allow",
+        "edit": "deny",
+        "bash": "deny"
+      }
+    },
+    "deep-context-backup": {
+      "description": "Fallback for deep-context if Gemini is rate-limited. Note: Mistral's context window is smaller than Gemini's 1M, so split very large inputs.",
+      "mode": "subagent",
+      "model": "mistral/mistral-large-latest",
+      "permission": {
+        "read": "allow",
+        "grep": "allow",
+        "glob": "allow",
+        "edit": "deny",
+        "bash": "deny"
+      }
+    },
+    "reasoning": {
+      "description": "Multi-step reasoning: confidence scoring, contradiction resolution, ontology mapping. Primary: OpenRouter DeepSeek R1. Backup: Mistral Large.",
+      "mode": "subagent",
+      "model": "openrouter/deepseek/deepseek-r1:free",
+      "permission": {
+        "read": "allow",
+        "grep": "allow",
+        "glob": "allow",
+        "task": "allow",
+        "edit": "deny",
+        "bash": "deny"
+      }
+    },
+    "reasoning-backup": {
+      "description": "Fallback for reasoning if OpenRouter's low daily cap (50-1000/day) is hit.",
+      "mode": "subagent",
+      "model": "mistral/mistral-large-latest",
+      "permission": {
+        "read": "allow",
+        "grep": "allow",
+        "glob": "allow",
+        "task": "allow",
+        "edit": "deny",
+        "bash": "deny"
+      }
+    }
+  }
+}

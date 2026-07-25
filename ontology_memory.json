@@ -1,0 +1,2132 @@
+{
+  "provides_information_about": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "worked_in": {
+    "canonical": "WORKED_AT",
+    "category": "AUTHORSHIP",
+    "confidence": 0.8
+  },
+  "applied_by": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "is_an_example_of": {
+    "canonical": "IS_A",
+    "category": "STRUCTURAL",
+    "confidence": 0.9
+  },
+  "contacted_by": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "threatens": {
+    "canonical": "AFFECTS",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "student_of": {
+    "canonical": "EMPLOYED_BY",
+    "category": "AUTHORSHIP",
+    "confidence": 0.9
+  },
+  "created": {
+    "canonical": "CREATED_BY",
+    "category": "AUTHORSHIP",
+    "confidence": 0.9
+  },
+  "acquaintance": {
+    "canonical": "RELATED_TO",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "used_at": {
+    "canonical": "USED_IN",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "compared_to": {
+    "canonical": "COMPATIBLE_WITH",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "communicates_with": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "controls": {
+    "canonical": "INFLUENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "depends_on": {
+    "canonical": "REQUIRES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "hosted_by": {
+    "canonical": "CONTAINS",
+    "category": "STRUCTURAL",
+    "confidence": 0.9
+  },
+  "provides": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "based_on": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "combination_of": {
+    "canonical": "PART_OF",
+    "category": "STRUCTURAL",
+    "confidence": 0.8
+  },
+  "target_of": {
+    "canonical": "TARGETS",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "located_in": {
+    "canonical": "PART_OF",
+    "category": "STRUCTURAL",
+    "confidence": 0.9
+  },
+  "offers": {
+    "canonical": "CREATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "acquires": {
+    "canonical": "CONTAINS",
+    "category": "STRUCTURAL",
+    "confidence": 0.9
+  },
+  "identifies": {
+    "canonical": "CREATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "engages": {
+    "canonical": "TARGETS",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "improves": {
+    "canonical": "INFLUENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "increases": {
+    "canonical": "INFLUENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "example_of": {
+    "canonical": "IS_A",
+    "category": "STRUCTURAL",
+    "confidence": 0.9
+  },
+  "violates": {
+    "canonical": "CONTRADICTS",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "handles": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "stores": {
+    "canonical": "CONTAINS",
+    "category": "STRUCTURAL",
+    "confidence": 0.9
+  },
+  "informs": {
+    "canonical": "INFLUENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "needed": {
+    "canonical": "REQUIRES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "occurred_during": {
+    "canonical": "PART_OF",
+    "category": "STRUCTURAL",
+    "confidence": 0.9
+  },
+  "belief": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "is_included_in": {
+    "canonical": "PART_OF",
+    "category": "STRUCTURAL",
+    "confidence": 0.8
+  },
+  "is_used_to_evaluate": {
+    "canonical": "EVALUATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "is_applicable_to": {
+    "canonical": "APPLICABLE_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "assigned": {
+    "canonical": "AUTHORED_BY",
+    "category": "AUTHORSHIP",
+    "confidence": 0.8
+  },
+  "occurred": {
+    "canonical": "PART_OF",
+    "category": "STRUCTURAL",
+    "confidence": 0.9
+  },
+  "produced_by": {
+    "canonical": "GENERATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "input": {
+    "canonical": "USED_BY",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "provides_input_for": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "produces_output_for": {
+    "canonical": "GENERATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "dominant_in": {
+    "canonical": "PART_OF",
+    "category": "STRUCTURAL",
+    "confidence": 0.8
+  },
+  "services_to": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "parent_of": {
+    "canonical": "IS_A",
+    "category": "STRUCTURAL",
+    "confidence": 0.9
+  },
+  "sibling_of": {
+    "canonical": "RELATED_TO",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "friend_of": {
+    "canonical": "RELATED_TO",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "believes_in": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "includes": {
+    "canonical": "CONTAINS",
+    "category": "STRUCTURAL",
+    "confidence": 0.9
+  },
+  "choses_from": {
+    "canonical": "GENERATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "determines": {
+    "canonical": "INFLUENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "covers": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "searches": {
+    "canonical": "EVALUATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "defined_in_terms_of": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "introduced": {
+    "canonical": "CREATED_BY",
+    "category": "AUTHORSHIP",
+    "confidence": 0.9
+  },
+  "proposed": {
+    "canonical": "CREATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "analyzed": {
+    "canonical": "EVALUATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "discovers": {
+    "canonical": "GENERATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "describes": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "approximated_by": {
+    "canonical": "SIMILAR_TO",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "measured_in": {
+    "canonical": "MEASURES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "governs": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "parameter_of": {
+    "canonical": "APPLICABLE_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "derived_from": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "predicted_by": {
+    "canonical": "EVALUATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "considers": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "calculates": {
+    "canonical": "GENERATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "affected_by": {
+    "canonical": "AFFECTS",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "operates_on": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "learns": {
+    "canonical": "TARGETS",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "outputs": {
+    "canonical": "GENERATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "justifies": {
+    "canonical": "SUPPORTS",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "maintains": {
+    "canonical": "CREATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "not_used_by": {
+    "canonical": "DIFFERENT_FROM",
+    "category": "SEMANTIC",
+    "confidence": 0.8
+  },
+  "edited_by": {
+    "canonical": "AUTHORED_BY",
+    "category": "AUTHORSHIP",
+    "confidence": 0.9
+  },
+  "guides": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "predicts": {
+    "canonical": "EVALUATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "advocated_by": {
+    "canonical": "SUPPORTS",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "basis_for": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "grandchild": {
+    "canonical": "PART_OF",
+    "category": "STRUCTURAL",
+    "confidence": 0.9
+  },
+  "father": {
+    "canonical": "MENTORED",
+    "category": "AUTHORSHIP",
+    "confidence": 0.9
+  },
+  "input_to": {
+    "canonical": "USED_IN",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "constituted_by": {
+    "canonical": "PART_OF",
+    "category": "STRUCTURAL",
+    "confidence": 0.8
+  },
+  "applied_to": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "classifies": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "approximates": {
+    "canonical": "EVALUATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "robust_to": {
+    "canonical": "SUPPORTS",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "outgrowth_of": {
+    "canonical": "FOLLOWS",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "converts": {
+    "canonical": "CREATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "restricted_to": {
+    "canonical": "APPLICABLE_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "partitioned_into": {
+    "canonical": "PART_OF",
+    "category": "STRUCTURAL",
+    "confidence": 0.8
+  },
+  "created_from": {
+    "canonical": "CREATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "applied_in": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "studied": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "compared": {
+    "canonical": "COMPATIBLE_WITH",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "applied": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "surveyed": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "updates": {
+    "canonical": "AFFECTS",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "minimizes": {
+    "canonical": "ADDRESSES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "inputs_to": {
+    "canonical": "USES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "appears_in": {
+    "canonical": "PART_OF",
+    "category": "STRUCTURAL",
+    "confidence": 0.8
+  },
+  "indicates": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "depicts": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "approaches": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "produces": {
+    "canonical": "GENERATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "evaluated_by": {
+    "canonical": "EVALUATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "shrinks": {
+    "canonical": "AFFECTS",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "compares": {
+    "canonical": "COMPATIBLE_WITH",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "estimated_by": {
+    "canonical": "MEASURES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "co_authored": {
+    "canonical": "COLLABORATED_WITH",
+    "category": "AUTHORSHIP",
+    "confidence": 0.9
+  },
+  "competitive_with": {
+    "canonical": "COMPATIBLE_WITH",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "analyzed_by": {
+    "canonical": "USED_BY",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "derived_by": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "equivalent_to": {
+    "canonical": "SAME_AS",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "comparable_to": {
+    "canonical": "SIMILAR_TO",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "maps_to": {
+    "canonical": "EVALUATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "alternative_to": {
+    "canonical": "DIFFERENT_FROM",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "described_by": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "pac_learnable": {
+    "canonical": "SUPPORTS",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "generalization_of": {
+    "canonical": "IS_A",
+    "category": "STRUCTURAL",
+    "confidence": 0.9
+  },
+  "illustrated_by": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "discusses": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "trained_with": {
+    "canonical": "USED_WITH",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "designs": {
+    "canonical": "CREATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "has_property": {
+    "canonical": "RELATED_TO",
+    "category": "SEMANTIC",
+    "confidence": 0.8
+  },
+  "solves": {
+    "canonical": "ADDRESSES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "blends": {
+    "canonical": "RELATED_TO",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "provided_overview": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "discussed": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "motivated_by": {
+    "canonical": "INFLUENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "inspired_by": {
+    "canonical": "INFLUENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "allows": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "adds": {
+    "canonical": "ADDRESSES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "performs": {
+    "canonical": "USES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "susceptible_to": {
+    "canonical": "AFFECTS",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "inverse_of": {
+    "canonical": "DIFFERENT_FROM",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "reduces": {
+    "canonical": "AFFECTS",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "has_relationship": {
+    "canonical": "RELATED_TO",
+    "category": "SEMANTIC",
+    "confidence": 0.8
+  },
+  "combines": {
+    "canonical": "IS_A",
+    "category": "STRUCTURAL",
+    "confidence": 0.9
+  },
+  "alters": {
+    "canonical": "INFLUENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "extracts": {
+    "canonical": "GENERATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "incorporates": {
+    "canonical": "CONTAINS",
+    "category": "STRUCTURAL",
+    "confidence": 0.8
+  },
+  "extends": {
+    "canonical": "IS_A",
+    "category": "STRUCTURAL",
+    "confidence": 0.9
+  },
+  "accepts": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "compared_with": {
+    "canonical": "COMPATIBLE_WITH",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "reported_on": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "analogous_to": {
+    "canonical": "SIMILAR_TO",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "described": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "illustrates": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "extends_to": {
+    "canonical": "SUPPORTS",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "published": {
+    "canonical": "CREATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "presented_at": {
+    "canonical": "CONTRIBUTED_TO",
+    "category": "AUTHORSHIP",
+    "confidence": 0.9
+  },
+  "interacts_with": {
+    "canonical": "INFLUENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "monitors": {
+    "canonical": "MEASURES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "lacks": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "balances_with": {
+    "canonical": "RELATED_TO",
+    "category": "SEMANTIC",
+    "confidence": 0.8
+  },
+  "engages_in": {
+    "canonical": "RELATED_TO",
+    "category": "SEMANTIC",
+    "confidence": 0.8
+  },
+  "navigates": {
+    "canonical": "APPLICABLE_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "perceives": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "maximizes": {
+    "canonical": "TARGETS",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "receives": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "difficult_to_predict": {
+    "canonical": "RELATED_TO",
+    "category": "SEMANTIC",
+    "confidence": 0.8
+  },
+  "observes": {
+    "canonical": "EVALUATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "choses": {
+    "canonical": "TARGETS",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "moves_from": {
+    "canonical": "FOLLOWS",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "executes": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "ends_with": {
+    "canonical": "PRECEDES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "available_to": {
+    "canonical": "APPLICABLE_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "visited_by": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "proves": {
+    "canonical": "SUPPORTS",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "occupy": {
+    "canonical": "CONTAINS",
+    "category": "STRUCTURAL",
+    "confidence": 0.8
+  },
+  "transitions": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "assigns": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "starts_with": {
+    "canonical": "PRECEDES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "originally_designed_for": {
+    "canonical": "DEVELOPED_BY",
+    "category": "AUTHORSHIP",
+    "confidence": 0.8
+  },
+  "adapts_to": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "proved": {
+    "canonical": "SUPPORTS",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "discussed_by": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "published_in": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "comparison_with": {
+    "canonical": "COMPATIBLE_WITH",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "recognizes": {
+    "canonical": "EVALUATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "explored": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "formalized": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "built_on": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "computes": {
+    "canonical": "GENERATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "processes": {
+    "canonical": "EVALUATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "refines": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "constructs": {
+    "canonical": "CREATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "studies": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "automates": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "casts": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "formalizes": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "introduced_by": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "presents": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "compares_with": {
+    "canonical": "COMPATIBLE_WITH",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "consistent_with": {
+    "canonical": "SUPPORTS",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "classified_by": {
+    "canonical": "EVALUATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "specialized_to": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "does_not_use": {
+    "canonical": "DIFFERENT_FROM",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "exhibits": {
+    "canonical": "SUPPORTS",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "causes": {
+    "canonical": "INFLUENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "modifies": {
+    "canonical": "AFFECTS",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "runs_on": {
+    "canonical": "USES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "has_structure": {
+    "canonical": "IS_A",
+    "category": "STRUCTURAL",
+    "confidence": 0.9
+  },
+  "operates_with": {
+    "canonical": "USES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "cannot_represent": {
+    "canonical": "DIFFERENT_FROM",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "variant_of": {
+    "canonical": "SIMILAR_TO",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "adjusts": {
+    "canonical": "AFFECTS",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "decays": {
+    "canonical": "INFLUENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "direction_of": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "avoids": {
+    "canonical": "AFFECTS",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "trains": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "expresses": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "encodes": {
+    "canonical": "CREATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "copies_from": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "drawn_from": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "estimates": {
+    "canonical": "MEASURES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "statement": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "tradeoff": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "assumes": {
+    "canonical": "SUPPORTS",
+    "category": "SEMANTIC",
+    "confidence": 0.8
+  },
+  "characterizes": {
+    "canonical": "EVALUATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "identical_to": {
+    "canonical": "SAME_AS",
+    "category": "SEMANTIC",
+    "confidence": 0.8
+  },
+  "added_to": {
+    "canonical": "GENERATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "returns": {
+    "canonical": "GENERATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "infers": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "converges_to": {
+    "canonical": "TARGETS",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "generated_by": {
+    "canonical": "GENERATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "weights": {
+    "canonical": "USES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "generated_from": {
+    "canonical": "GENERATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "bounds": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "pac_learns": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "defined_over": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "shatters": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "defines": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "implemented_by": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "accommodates": {
+    "canonical": "APPLICABLE_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "compares_to": {
+    "canonical": "COMPATIBLE_WITH",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "generalizes": {
+    "canonical": "GENERATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "examined_by": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "expound_by": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "votes": {
+    "canonical": "USES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "induces": {
+    "canonical": "CREATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "composed_of": {
+    "canonical": "PART_OF",
+    "category": "STRUCTURAL",
+    "confidence": 0.9
+  },
+  "surrounds": {
+    "canonical": "CONTAINS",
+    "category": "STRUCTURAL",
+    "confidence": 0.8
+  },
+  "constrains": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "summarized_by": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "improved_by": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "proposed_by": {
+    "canonical": "CREATED_BY",
+    "category": "AUTHORSHIP",
+    "confidence": 0.9
+  },
+  "relies_less_on": {
+    "canonical": "INFLUENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "accelerates": {
+    "canonical": "INFLUENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "hard_wires": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "suited_for": {
+    "canonical": "SUPPORTS",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "publishes": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "relevant_to": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "devoted_to": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "interpreted_as": {
+    "canonical": "SAME_AS",
+    "category": "SEMANTIC",
+    "confidence": 0.8
+  },
+  "translates_to": {
+    "canonical": "GENERATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "inverts": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "more_expressive_than": {
+    "canonical": "SUPPORTS",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "predates": {
+    "canonical": "PRECEDES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "restricts": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "regressed_through": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "prefers": {
+    "canonical": "SUPPORTS",
+    "category": "SEMANTIC",
+    "confidence": 0.8
+  },
+  "explored_by": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "reports": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "explores": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "published_by": {
+    "canonical": "CREATED_BY",
+    "category": "AUTHORSHIP",
+    "confidence": 0.9
+  },
+  "affiliated_with": {
+    "canonical": "EMPLOYED_BY",
+    "category": "AUTHORSHIP",
+    "confidence": 0.9
+  },
+  "updated_by": {
+    "canonical": "INFLUENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "initializes": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "inconsistent_with": {
+    "canonical": "CONTRADICTS",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "sold_by": {
+    "canonical": "USED_BY",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "popular_in": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "reviewed_by": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "draws_on": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "family_of": {
+    "canonical": "RELATED_TO",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "influenced_by": {
+    "canonical": "INFLUENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "adjusted_by": {
+    "canonical": "EVALUATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "assigned_to": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "corresponds_to": {
+    "canonical": "RELATED_TO",
+    "category": "SEMANTIC",
+    "confidence": 0.8
+  },
+  "provides_input_to": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "has_value": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "ignores": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "performs_poorly_with": {
+    "canonical": "AFFECTS",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "enumerates": {
+    "canonical": "GENERATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "implements": {
+    "canonical": "IS_A",
+    "category": "STRUCTURAL",
+    "confidence": 0.9
+  },
+  "incompatible_with": {
+    "canonical": "DIFFERENT_FROM",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "manages": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "designed_for": {
+    "canonical": "APPLICABLE_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "undergoes": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "overestimates": {
+    "canonical": "AFFECTS",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "optimizes": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "ranks": {
+    "canonical": "EVALUATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "analyzes": {
+    "canonical": "EVALUATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "flags": {
+    "canonical": "TARGETS",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "technical_focused": {
+    "canonical": "RELATED_TO",
+    "category": "SEMANTIC",
+    "confidence": 0.8
+  },
+  "applied_across": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "primarily_applied_in": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "iterative_methodology": {
+    "canonical": "IS_A",
+    "category": "STRUCTURAL",
+    "confidence": 0.8
+  },
+  "sequential_approach": {
+    "canonical": "FOLLOWS",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "lacks_emphasis_on": {
+    "canonical": "DIFFERENT_FROM",
+    "category": "SEMANTIC",
+    "confidence": 0.8
+  },
+  "industry_standard": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "less_common": {
+    "canonical": "DIFFERENT_FROM",
+    "category": "SEMANTIC",
+    "confidence": 0.8
+  },
+  "adopted_framework": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "strong_business_orientation": {
+    "canonical": "RELATED_TO",
+    "category": "SEMANTIC",
+    "confidence": 0.8
+  },
+  "suits_perfectly": {
+    "canonical": "SUPPORTS",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "main_goal": {
+    "canonical": "SUPPORTS",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "core_phase": {
+    "canonical": "PART_OF",
+    "category": "STRUCTURAL",
+    "confidence": 0.9
+  },
+  "full_coverage": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "closes_communication_gap": {
+    "canonical": "ADDRESSES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "offers_clear_deliverables": {
+    "canonical": "CREATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "widely_used": {
+    "canonical": "USED_IN",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "suitable_for_different_industries": {
+    "canonical": "APPLICABLE_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "offers_clear_checkpoints": {
+    "canonical": "CREATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "widely_used_in": {
+    "canonical": "USED_IN",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "suitable_for": {
+    "canonical": "APPLICABLE_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "established": {
+    "canonical": "CREATED_BY",
+    "category": "AUTHORSHIP",
+    "confidence": 0.8
+  },
+  "suits": {
+    "canonical": "SUPPORTS",
+    "category": "SEMANTIC",
+    "confidence": 0.8
+  },
+  "provides_overview": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "leads_to": {
+    "canonical": "PRECEDES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "encoding": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "bridges": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "powered_by": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "capable_of": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "interprets": {
+    "canonical": "EVALUATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "assists_in": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "simplifies": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "allows_building": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "allows_creating": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "simulates": {
+    "canonical": "SIMILAR_TO",
+    "category": "SEMANTIC",
+    "confidence": 0.8
+  },
+  "visualizes": {
+    "canonical": "GENERATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "groups": {
+    "canonical": "PART_OF",
+    "category": "STRUCTURAL",
+    "confidence": 0.8
+  },
+  "labels": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "find": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "normalize": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "captures": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "categorizes": {
+    "canonical": "IS_A",
+    "category": "STRUCTURAL",
+    "confidence": 0.8
+  },
+  "learns_patterns_by": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "transformed_from": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "builds": {
+    "canonical": "CREATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "connects_to": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "overseen_by": {
+    "canonical": "EVALUATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "conducted_at": {
+    "canonical": "WORKED_AT",
+    "category": "AUTHORSHIP",
+    "confidence": 0.9
+  },
+  "prepared_for": {
+    "canonical": "USED_FOR",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "prepared_by": {
+    "canonical": "CREATED_BY",
+    "category": "AUTHORSHIP",
+    "confidence": 0.9
+  },
+  "supervises": {
+    "canonical": "MENTORED",
+    "category": "AUTHORSHIP",
+    "confidence": 0.9
+  },
+  "conducted_during": {
+    "canonical": "PART_OF",
+    "category": "STRUCTURAL",
+    "confidence": 0.9
+  },
+  "addressed_to": {
+    "canonical": "ADDRESSES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "chooses": {
+    "canonical": "EVALUATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "maps": {
+    "canonical": "EVALUATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "provided": {
+    "canonical": "CREATED_BY",
+    "category": "AUTHORSHIP",
+    "confidence": 0.8
+  },
+  "defined_by": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "tested_on": {
+    "canonical": "EVALUATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "not_used_in": {
+    "canonical": "DIFFERENT_FROM",
+    "category": "SEMANTIC",
+    "confidence": 0.8
+  },
+  "regressed_to": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "re_represents": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "successor_to": {
+    "canonical": "FOLLOWS",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "showed_limitations_of": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "governed_by": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "disjoint_from": {
+    "canonical": "DIFFERENT_FROM",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "justified_by": {
+    "canonical": "SUPPORTS",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "provided_to": {
+    "canonical": "USED_BY",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "can_be": {
+    "canonical": "SUPPORTS",
+    "category": "SEMANTIC",
+    "confidence": 0.8
+  },
+  "learned_from": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "inferred_from": {
+    "canonical": "INFLUENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "determines_weight": {
+    "canonical": "EVALUATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "surveys": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "cannot_consider": {
+    "canonical": "DIFFERENT_FROM",
+    "category": "SEMANTIC",
+    "confidence": 0.8
+  },
+  "specializes": {
+    "canonical": "IS_A",
+    "category": "STRUCTURAL",
+    "confidence": 0.8
+  },
+  "conducts": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "driven_by": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "fits": {
+    "canonical": "SUPPORTS",
+    "category": "SEMANTIC",
+    "confidence": 0.8
+  },
+  "builds_on": {
+    "canonical": "FOLLOWS",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "may_not_have": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "aims_to_learn": {
+    "canonical": "TARGETS",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "discovered_by": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "worked_on": {
+    "canonical": "CONTRIBUTED_TO",
+    "category": "AUTHORSHIP",
+    "confidence": 0.9
+  },
+  "initialized_to": {
+    "canonical": "SAME_AS",
+    "category": "SEMANTIC",
+    "confidence": 0.8
+  },
+  "illustrated_with": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "not_robust_to": {
+    "canonical": "AFFECTS",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "casts_as": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "describes_as": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "competes_with": {
+    "canonical": "COMPATIBLE_WITH",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "introduces": {
+    "canonical": "CREATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "implemented_on": {
+    "canonical": "USED_IN",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "special_case_of": {
+    "canonical": "SUBSET_OF",
+    "category": "STRUCTURAL",
+    "confidence": 0.9
+  },
+  "discussed_in": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "copies_value_from": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "described_in": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "underlies": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "adds_to": {
+    "canonical": "GENERATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "seeks": {
+    "canonical": "TARGETS",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "proposed_alternative": {
+    "canonical": "SUPPORTS",
+    "category": "SEMANTIC",
+    "confidence": 0.8
+  },
+  "searches_for": {
+    "canonical": "TARGETS",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "revises": {
+    "canonical": "AFFECTS",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "share_limitations_with": {
+    "canonical": "RELATED_TO",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "output_by": {
+    "canonical": "CREATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "learned_by": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "takes": {
+    "canonical": "USES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "expounded_by": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "partitions": {
+    "canonical": "PART_OF",
+    "category": "STRUCTURAL",
+    "confidence": 0.9
+  },
+  "specific_case_of": {
+    "canonical": "IS_A",
+    "category": "STRUCTURAL",
+    "confidence": 0.9
+  },
+  "represented_by": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "manipulates": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "demonstrated": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "provided_perspective": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "authored_textbook": {
+    "canonical": "AUTHORED_BY",
+    "category": "AUTHORSHIP",
+    "confidence": 0.9
+  },
+  "publishes_results": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "relevant_conference": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "devoted_special_issues": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "inverted_by": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "replaces": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "can_learn": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "derives": {
+    "canonical": "GENERATES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "relates": {
+    "canonical": "RELATED_TO",
+    "category": "SEMANTIC",
+    "confidence": 0.9
+  },
+  "refinement_of": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "has_attribute": {
+    "canonical": "MEASURES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "computed_by": {
+    "canonical": "ENABLES",
+    "category": "FUNCTIONAL",
+    "confidence": 0.9
+  },
+  "binds_variables": {
+    "canonical": "APPLIES_TO",
+    "category": "FUNCTIONAL",
+    "confidence": 0.8
+  },
+  "adapted": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  },
+  "reported": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "developed_for": {
+    "canonical": "DEVELOPED_BY",
+    "category": "AUTHORSHIP",
+    "confidence": 0.9
+  },
+  "covered_by": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "studied_by": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.9
+  },
+  "ignored_by": {
+    "canonical": "REFERENCES",
+    "category": "REFERENTIAL",
+    "confidence": 0.8
+  }
+}

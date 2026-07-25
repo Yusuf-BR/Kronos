@@ -5,6 +5,9 @@ from db.neo4j_client import Neo4jClient
 from db.qdrant_client import KronosQdrantClient
 from core.config import config
 from datetime import datetime
+from agents.learning_engine import LearningEngine
+from agents.entity_memory import EntityMemory
+from agents.alias_memory import AliasMemory
 
 logger = logging.getLogger(__name__)
 
@@ -17,7 +20,8 @@ The digest should include:
 3. Active conflicts that need human review
 4. Stale or low-confidence knowledge
 5. Notable relationships discovered
-6. Recommendations for improving knowledge quality
+6. Learning Engine findings — reinforced aliases and unlinked entity pairs worth reviewing
+7. Recommendations for improving knowledge quality
 
 Write in a clear, professional tone. Be concise but informative.
 This digest will be read by the system administrator to understand the state of the knowledge base.
@@ -29,6 +33,7 @@ class CuratorAgent:
         self.mistral_client = Mistral(api_key=config.MISTRAL_API_KEY)
         self.neo4j = Neo4jClient()
         self.qdrant = KronosQdrantClient()
+        self.learning_engine = LearningEngine()
         logger.info("CuratorAgent initialized")
 
     def run(self) -> dict:
@@ -43,8 +48,19 @@ class CuratorAgent:
         top_entities = self._get_top_entities()
         sources = self._get_sources()
 
+        # Learning Engine consolidation pass — reinforce aliases, find
+        # unlinked co-occurring entity pairs. AliasMemory saves immediately
+        # on every write (no flush() method), EntityMemory batches and
+        # needs an explicit flush.
+        entity_memory = EntityMemory()
+        alias_memory = AliasMemory()
+        learning_report = self.learning_engine.run_consolidation(
+            entity_memory, alias_memory, self.neo4j
+        )
+        entity_memory.flush()
+
         digest = self._generate_digest(
-            stats, conflicts, stale, top_entities, sources, timestamp
+            stats, conflicts, stale, top_entities, sources, learning_report, timestamp
         )
 
         digest_path = self._save_digest(digest, timestamp)
@@ -55,6 +71,8 @@ class CuratorAgent:
             "decayed_nodes": decayed,
             "stale_entities": len(stale),
             "active_conflicts": len(conflicts),
+            "aliases_reinforced": learning_report["aliases_reinforced"],
+            "unlinked_candidates": learning_report["total_unlinked_candidates"],
             "digest_path": digest_path
         }
 
@@ -110,7 +128,10 @@ class CuratorAgent:
 
     def _generate_digest(self, stats: dict, conflicts: list,
                           stale: list, top_entities: list,
-                          sources: list, timestamp: str) -> str:
+                          sources: list, learning_report: dict, timestamp: str) -> str:
+        unlinked = learning_report.get("unlinked_candidate_pairs", [])
+        type_stats = learning_report.get("entity_type_stats", {})
+
         context = f"""
 KRONOS Knowledge Base Snapshot — {timestamp}
 
@@ -130,6 +151,14 @@ Average Confidence: {stats.get('avg_confidence', 0):.2f}
 
 === TOP ENTITIES BY CONFIDENCE ===
 {chr(10).join([f"- [{e['type']}] {e['name']} (confidence:{e['confidence']:.2f}, source:{e['source']})" for e in top_entities])}
+
+=== LEARNING ENGINE ===
+Aliases reinforced this cycle: {learning_report.get('aliases_reinforced', 0)}
+Unlinked candidate pairs (co-occur often, no relationship edge yet): {learning_report.get('total_unlinked_candidates', 0)}
+{chr(10).join([f"- {p['entity_a']} <-> {p['entity_b']} (seen together {p['count']}x across {len(p['source_docs'])} doc(s))" for p in unlinked[:5]]) or "None"}
+
+=== ENTITY TYPE CONFIDENCE STATS ===
+{chr(10).join([f"- {t}: {v['count']} entities, avg confidence {v['avg_confidence']}" for t, v in type_stats.items()]) or "None"}
 """
         try:
             response = self.mistral_client.chat.complete(
@@ -165,4 +194,5 @@ Average Confidence: {stats.get('avg_confidence', 0):.2f}
         return filename
 
     def close(self):
+        self.learning_engine.close()
         self.neo4j.close()
