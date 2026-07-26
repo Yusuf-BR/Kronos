@@ -1,0 +1,33 @@
+{
+    "generation_info": {
+        "timestamp": "2026-07-26T16:47:40.295607",
+        "main_model": "mistral-small-latest",
+        "generator_version": "1.0.1",
+        "repo_path": "C:\\Projects\\Kronos",
+        "commit_id": "f20ca136539ae6e58a1ee301e534fdade7ef57f2"
+    },
+    "statistics": {
+        "total_components": 247,
+        "leaf_nodes": 23,
+        "max_depth": 2
+    },
+    "files_generated": [
+        "overview.md",
+        "module_tree.json",
+        "first_module_tree.json",
+        "agents.md",
+        "agent_orchestration.md",
+        "agent_orchestration_learning_engine.md",
+        "agent_orchestration_reconciler.md",
+        "agent_orchestration_self_evaluator.md",
+        "api.md",
+        "core.md",
+        "information_processing.md",
+        "information_processing_analyst.md",
+        "information_processing_curator.md",
+        "knowledge_processing.md",
+        "utils.md",
+        "utils_quota.md",
+        "utils_retry.md"
+    ]
+}

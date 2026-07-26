@@ -1,0 +1,37 @@
+{
+    "generation_info": {
+        "timestamp": "2026-07-26T16:39:41.708703",
+        "main_model": "mistral-small-latest",
+        "generator_version": "1.0.1",
+        "repo_path": "C:\\Projects\\Kronos",
+        "commit_id": "f20ca136539ae6e58a1ee301e534fdade7ef57f2"
+    },
+    "statistics": {
+        "total_components": 247,
+        "leaf_nodes": 23,
+        "max_depth": 2
+    },
+    "files_generated": [
+        "overview.md",
+        "module_tree.json",
+        "first_module_tree.json",
+        "agent_framework.md",
+        "analyst_module.md",
+        "api_layer.md",
+        "codex_module.md",
+        "configuration.md",
+        "curator_module.md",
+        "database_clients.md",
+        "database_clients_neo4j.md",
+        "database_clients_qdrant.md",
+        "extractor_module.md",
+        "memory_systems.md",
+        "memory_systems_agent_framework.md",
+        "memory_systems_data_processing.md",
+        "memory_systems_utilities.md",
+        "reconciler_module.md",
+        "reconciler_quick_reference.md",
+        "system_integration_reconciler.md",
+        "watcher_module.md"
+    ]
+}
