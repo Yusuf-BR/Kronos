@@ -1,0 +1,14 @@
+{
+  "new_types": {
+    "REPRESENTED_BY": "REFERENTIAL",
+    "PUBLISHED_BY": "AUTHORSHIP",
+    "PROTECTS": "FUNCTIONAL",
+    "DEFINES": "SEMANTIC"
+  },
+  "approved_synonyms": {
+    "REPRESENTED_BY": "REPRESENTED_BY",
+    "PUBLISHED_BY": "PUBLISHED_BY",
+    "PROTECTS": "PROTECTS",
+    "DEFINES": "DEFINES"
+  }
+}

@@ -41,10 +41,13 @@
     "suggested_canonical": "PROTECTS",
     "suggested_category": "FUNCTIONAL",
     "suggestion_confidence": 0.9,
-    "review_status": "pending_review",
+    "review_status": "approved",
     "first_seen": "2026-07-20T17:51:46.298348",
     "last_seen": "2026-07-20T20:45:35.747313",
-    "justification": "The relation describes a functional role of one entity in safeguarding another."
+    "justification": "The relation describes a functional role of one entity in safeguarding another.",
+    "final_canonical": "PROTECTS",
+    "final_category": "FUNCTIONAL",
+    "approved_at": "2026-07-25T23:48:42.442262"
   },
   "adapts_to": {
     "raw_examples": [
@@ -282,10 +285,13 @@
     "suggested_canonical": "DEFINES",
     "suggested_category": "SEMANTIC",
     "suggestion_confidence": 0.9,
-    "review_status": "pending_review",
+    "review_status": "approved",
     "first_seen": "2026-07-24T23:36:05.522351",
     "last_seen": "2026-07-24T23:40:26.197994",
-    "justification": "The relation describes how one entity establishes the meaning or form of another."
+    "justification": "The relation describes how one entity establishes the meaning or form of another.",
+    "final_canonical": "DEFINES",
+    "final_category": "SEMANTIC",
+    "approved_at": "2026-07-25T23:50:07.374038"
   },
   "characterizes": {
     "raw_examples": [
@@ -826,10 +832,13 @@
     "suggested_canonical": "REPRESENTED_BY",
     "suggested_category": "REFERENTIAL",
     "suggestion_confidence": 0.9,
-    "review_status": "pending_review",
+    "review_status": "approved",
     "first_seen": "2026-07-24T23:38:04.941332",
     "last_seen": "2026-07-25T14:44:23.579885",
-    "justification": "The examples clearly show an entity being symbolized or denoted by another entity."
+    "justification": "The examples clearly show an entity being symbolized or denoted by another entity.",
+    "final_canonical": "REPRESENTED_BY",
+    "final_category": "REFERENTIAL",
+    "approved_at": "2026-07-25T23:46:46.126073"
   },
   "published": {
     "raw_examples": [
@@ -1148,10 +1157,13 @@
     "suggested_canonical": "PUBLISHED_BY",
     "suggested_category": "AUTHORSHIP",
     "suggestion_confidence": 0.9,
-    "review_status": "pending_review",
+    "review_status": "approved",
     "first_seen": "2026-07-24T23:38:57.098030",
     "last_seen": "2026-07-24T23:41:19.184410",
-    "justification": "The relation clearly indicates a publication relationship between authors and publishers."
+    "justification": "The relation clearly indicates a publication relationship between authors and publishers.",
+    "final_canonical": "PUBLISHED_BY",
+    "final_category": "AUTHORSHIP",
+    "approved_at": "2026-07-25T23:46:56.011958"
   },
   "incompatible_with": {
     "raw_examples": [

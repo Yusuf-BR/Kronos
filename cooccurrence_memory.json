@@ -142581,5 +142581,35 @@
     "source_docs": [
       "MachineLearningTomMitchell.pdf"
     ]
+  },
+  "CONCEPT::project | PERSON::youssef ben romdhane": {
+    "entity_a": "Youssef Ben Romdhane",
+    "type_a": "PERSON",
+    "entity_b": "project",
+    "type_b": "CONCEPT",
+    "count": 1,
+    "source_docs": [
+      "Message for my project.pdf"
+    ]
+  },
+  "PERSON::youssef ben romdhane | TECHNOLOGY::pdf file": {
+    "entity_a": "Youssef Ben Romdhane",
+    "type_a": "PERSON",
+    "entity_b": "pdf file",
+    "type_b": "TECHNOLOGY",
+    "count": 1,
+    "source_docs": [
+      "Message for my project.pdf"
+    ]
+  },
+  "CONCEPT::project | TECHNOLOGY::pdf file": {
+    "entity_a": "project",
+    "type_a": "CONCEPT",
+    "entity_b": "pdf file",
+    "type_b": "TECHNOLOGY",
+    "count": 1,
+    "source_docs": [
+      "Message for my project.pdf"
+    ]
   }
 }

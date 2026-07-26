@@ -43,5 +43,10 @@
     "reliability": 0.7,
     "wins": 0,
     "losses": 0
+  },
+  "Message for my project.pdf": {
+    "reliability": 0.7,
+    "wins": 0,
+    "losses": 0
   }
 }
