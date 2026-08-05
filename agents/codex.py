@@ -17,6 +17,7 @@ from agents.source_reliability import SourceReliability
 from agents.self_evaluation import SelfEvaluator
 from mistralai import Mistral
 from agents.evidence_engine import build_evidence_record
+from utils.acronym import extract_parenthetical
 
 logger = logging.getLogger(__name__)
 
@@ -24,6 +25,7 @@ MIN_FUZZY_MATCH_LENGTH = 4
 FUZZY_MATCH_THRESHOLD = 0.87
 NEW_ENTITY_RESOLUTION_CONFIDENCE = 1.0
 REJECTED_REFEREE_RESOLUTION_CONFIDENCE = 0.75
+ACRONYM_MATCH_CONFIDENCE = 0.95
 
 TYPO_MAX_EDIT_DISTANCE = 2
 NEGATION_PREFIXES = ("un", "non", "in", "im", "ir", "il", "dis", "anti", "de", "mis")
@@ -224,6 +226,23 @@ class CodexAgent:
                 entity_domain = entity.get("_domain")
                 extraction_confidence = entity.get("_extraction_confidence", 1.0)
 
+                # ── Declared-alias pre-normalization ──
+                # "Machine Learning (ML)" is the source text itself stating
+                # that "ML" abbreviates "Machine Learning" — ground truth,
+                # not an inference. Commit it immediately at full confidence
+                # rather than waiting on embedding/fuzzy/referee matching,
+                # which cannot reliably catch acronym-vs-full-phrase pairs
+                # (see utils/acronym.py for why). This also means the base
+                # name — not the parenthetical form — is what actually flows
+                # into the rest of the pipeline as this entity's name.
+                base_name, declared_abbrev = extract_parenthetical(display_name)
+                if declared_abbrev:
+                    display_name = base_name
+                    normalized, _ = normalize_entity_name(base_name)
+                    entity["name"] = base_name
+                    self.alias_memory.record(declared_abbrev, base_name, 1.0, source="declared_parenthetical")
+                    logger.info(f"  Declared alias: '{declared_abbrev}' -> '{base_name}' (from parenthetical form)")
+
                 entity_resolution_confidence = NEW_ENTITY_RESOLUTION_CONFIDENCE
 
                 canonical, alias_confidence = self.alias_memory.get(normalized)
@@ -241,6 +260,20 @@ class CodexAgent:
                             entity_embedding_vec, entity_type, domain=entity_domain, threshold=0.85
                         )
 
+                    # ── Acronym/abbreviation check ──
+                    # Runs independently of embedding similarity, which is
+                    # unreliable for short-acronym-vs-full-phrase pairs by
+                    # construction (e.g. "ML" vs "Machine Learning" — low
+                    # cosine similarity AND high edit distance despite
+                    # meaning the same thing). Catches standalone "ML"
+                    # mentions that never had a "(ML)" form declared anywhere.
+                    via_acronym = False
+                    if not similar:
+                        acronym_match = self.entity_memory.find_acronym_match(display_name, entity_type, domain=entity_domain)
+                        if acronym_match:
+                            similar = {**acronym_match, "similarity": ACRONYM_MATCH_CONFIDENCE}
+                            via_acronym = True
+
                     if similar:
                         disqualified = is_disqualified_match(
                             display_name, similar["name"],
@@ -248,7 +281,7 @@ class CodexAgent:
                         )
                         if disqualified:
                             logger.info(
-                                f"  Embedding match REJECTED (structurally disqualified: {disqualified}): "
+                                f"  {'Acronym' if via_acronym else 'Embedding'} match REJECTED (structurally disqualified: {disqualified}): "
                                 f"'{display_name}' ~ '{similar['name']}' — treating as distinct entity"
                             )
                             if "different domains" in disqualified:
@@ -264,11 +297,12 @@ class CodexAgent:
                                     "source_doc": filename
                                 })
                         else:
-                            logger.info(f"  Embedding match: '{display_name}' ~ '{similar['name']}' — using canonical")
+                            logger.info(f"  {'Acronym' if via_acronym else 'Embedding'} match: '{display_name}' ~ '{similar['name']}' — using canonical")
                             entity["name"] = similar["name"]
                             entity_resolution_confidence = similar.get("similarity", 0.85)
                             self.alias_memory.record(
-                                display_name, similar["name"], entity_resolution_confidence, source="embedding"
+                                display_name, similar["name"], entity_resolution_confidence,
+                                source="acronym" if via_acronym else "embedding"
                             )
                             resolved = True
 
@@ -483,7 +517,6 @@ class CodexAgent:
             except Exception as e:
                 logger.warning(f"  Relationship failed [{rel['from']} -> {rel['to']}]: {e}")
 
-        # Flush deferred cross-domain links after all entities exist
         for link in self._pending_cross_domain_links:
             cross_link_confidence = 0.4
             evidence = build_evidence_record(
@@ -539,6 +572,7 @@ class CodexAgent:
                 for c in extracted["claims"]
             ])
             claims_count = len(extracted["claims"])
+
         all_vectors = [
             v for v in all_vectors
             if isinstance(v.get("text"), str) and v["text"].strip()

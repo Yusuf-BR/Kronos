@@ -5,6 +5,7 @@ import math
 from pathlib import Path
 
 from utils.atomic_json import atomic_write_json
+from utils.acronym import is_acronym_match
 
 logger = logging.getLogger(__name__)
 
@@ -29,7 +30,6 @@ class EntityMemory:
         self._embeddings: dict[str, list[float]] = {}
         self._dirty = False
         self._load()
-        # If JSON was empty/missing and Neo4j is available, hydrate from source of truth
         if not self.entities and self.neo4j_client:
             self._hydrate_from_neo4j()
         logger.info(f"EntityMemory initialized with {len(self.entities)} entities (metadata only, no persisted vectors)")
@@ -46,13 +46,11 @@ class EntityMemory:
                 self.entities = {}
 
     def _hydrate_from_neo4j(self):
-        """Rebuild in-process cache from Neo4j when local JSON is missing."""
         try:
             records = self.neo4j_client.get_all_entities()
             for record in records:
                 key = self._key(record["canonical"], record["type"])
 
-                # Parse serialized properties dict to extract description
                 description = ""
                 if record.get("properties"):
                     try:
@@ -62,7 +60,6 @@ class EntityMemory:
                     except (ValueError, SyntaxError):
                         pass
 
-                # Use evidence count as a proxy for occurrence_count
                 occurrence_count = 1
                 if record.get("evidence"):
                     try:
@@ -116,6 +113,27 @@ class EntityMemory:
                 "domain": best_match.get("domain"),
                 "similarity": best_score
             }
+        return None
+
+    def find_acronym_match(self, name: str, entity_type: str, domain: str | None = None) -> dict | None:
+        """
+        Independent of embedding similarity — scans known entities of the
+        same type for a plausible acronym/abbreviation relationship (e.g.
+        'ML' <-> 'Machine Learning'). Both embedding cosine similarity and
+        edit-distance checks fail on this pattern by construction (short
+        token vs long phrase, see utils/acronym.py), so this needs its
+        own independent check rather than a tuned threshold on either.
+        """
+        for entry in self.entities.values():
+            if entry.get("type") != entity_type:
+                continue
+            if domain and entry.get("domain") and domain != entry.get("domain"):
+                continue
+            candidate = entry["canonical"]
+            if candidate.lower() == name.lower():
+                continue
+            if is_acronym_match(name, candidate):
+                return {"name": candidate, "type": entry["type"], "domain": entry.get("domain")}
         return None
 
     def upsert(self, canonical_name: str, entity_type: str, embedding: list[float],

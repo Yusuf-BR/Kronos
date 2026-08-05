@@ -192,10 +192,10 @@
     "source": "embedding"
   },
   "nlp": {
-    "canonical": "NLP",
+    "canonical": "Natural Language Processing",
     "confidence": 1.0,
     "times_seen": 3,
-    "source": "embedding"
+    "source": "manual_merge_cleanup"
   },
   "rag": {
     "canonical": "Retrieval-augmented generation",
@@ -264,10 +264,10 @@
     "source": "embedding"
   },
   "csv": {
-    "canonical": "CSV",
+    "canonical": "Comma-Separated Values",
     "confidence": 1.0,
     "times_seen": 3,
-    "source": "embedding"
+    "source": "manual_merge_cleanup"
   },
   "sql server": {
     "canonical": "SQL Server",
@@ -630,10 +630,10 @@
     "source": "embedding"
   },
   "knn": {
-    "canonical": "KNN",
+    "canonical": "KNeighbors",
     "confidence": 1.0,
-    "times_seen": 3,
-    "source": "embedding"
+    "times_seen": 1,
+    "source": "manual_merge_cleanup"
   },
   "recall": {
     "canonical": "Recall",
@@ -1164,10 +1164,10 @@
     "source": "embedding"
   },
   "vvc": {
-    "canonical": "VVC",
+    "canonical": "Visionary Ventures Consulting",
     "confidence": 1.0,
     "times_seen": 3,
-    "source": "embedding"
+    "source": "manual_merge_cleanup"
   },
   "visionary ventures consulting logo": {
     "canonical": "Visionary Ventures Consulting Logo",
@@ -3546,10 +3546,10 @@
     "source": "embedding"
   },
   "lang (1995)": {
-    "canonical": "Lang (1995)",
+    "canonical": "Lang",
     "confidence": 1.0,
     "times_seen": 2,
-    "source": "embedding"
+    "source": "manual_merge_cleanup"
   },
   "bayesian belief networks": {
     "canonical": "Bayesian belief networks",
@@ -4314,10 +4314,10 @@
     "source": "embedding"
   },
   "kbann": {
-    "canonical": "KBANN",
+    "canonical": "Knowledge-based Artificial Neural Networks",
     "confidence": 1.0,
     "times_seen": 3,
-    "source": "embedding"
+    "source": "manual_merge_cleanup"
   },
   "liftable": {
     "canonical": "Liftable",
@@ -5274,10 +5274,10 @@
     "source": "embedding"
   },
   "ebl": {
-    "canonical": "EBL",
+    "canonical": "Explanation-Based Learning",
     "confidence": 1.0,
     "times_seen": 3,
-    "source": "embedding"
+    "source": "manual_merge_cleanup"
   },
   "expectation maximization": {
     "canonical": "expectation maximization",
@@ -5862,10 +5862,10 @@
     "source": "embedding"
   },
   "case-based reasoning (cbr)": {
-    "canonical": "case-based reasoning (CBR)",
+    "canonical": "Case-Based Reasoning",
     "confidence": 1.0,
     "times_seen": 2,
-    "source": "embedding"
+    "source": "manual_merge_cleanup"
   },
   "sycara et al. 1992": {
     "canonical": "Sycara et al. 1992",
@@ -5958,10 +5958,10 @@
     "source": "embedding"
   },
   "cbr": {
-    "canonical": "CBR",
+    "canonical": "Case-Based Reasoning",
     "confidence": 1.0,
-    "times_seen": 2,
-    "source": "embedding"
+    "times_seen": 1,
+    "source": "manual_merge_cleanup"
   },
   "local approximations": {
     "canonical": "Local approximations",
@@ -7446,10 +7446,10 @@
     "source": "embedding"
   },
   "markov decision process (mdp)": {
-    "canonical": "Markov decision process (MDP)",
+    "canonical": "Markov Decision Process",
     "confidence": 1.0,
     "times_seen": 2,
-    "source": "embedding"
+    "source": "manual_merge_cleanup"
   },
   "state": {
     "canonical": "State",
@@ -7566,10 +7566,10 @@
     "source": "embedding"
   },
   "mdp": {
-    "canonical": "MDP",
+    "canonical": "Markov Decision Process",
     "confidence": 1.0,
-    "times_seen": 3,
-    "source": "embedding"
+    "times_seen": 1,
+    "source": "manual_merge_cleanup"
   },
   "training episode": {
     "canonical": "Training episode",
@@ -10824,10 +10824,10 @@
     "source": "embedding"
   },
   "v(yi)": {
-    "canonical": "V(Yi)",
+    "canonical": "V",
     "confidence": 1.0,
     "times_seen": 2,
-    "source": "embedding"
+    "source": "manual_merge_cleanup"
   },
   "joint space": {
     "canonical": "Joint space",
@@ -13701,7 +13701,7 @@
     "canonical": "Area Under the Curve",
     "confidence": 1.0,
     "times_seen": 1,
-    "source": "referee"
+    "source": "manual_merge_cleanup"
   },
   "automated data cleaning": {
     "canonical": "Data cleaning automation",
@@ -13882,5 +13882,77 @@
     "confidence": 0.9456,
     "times_seen": 1,
     "source": "embedding"
+  },
+  "true positive (tp)": {
+    "canonical": "True Positive",
+    "confidence": 1.0,
+    "times_seen": 1,
+    "source": "manual_merge_cleanup"
+  },
+  "tp": {
+    "canonical": "True Positive",
+    "confidence": 1.0,
+    "times_seen": 1,
+    "source": "manual_merge_cleanup"
+  },
+  "false positive (fp)": {
+    "canonical": "False Positive",
+    "confidence": 1.0,
+    "times_seen": 1,
+    "source": "manual_merge_cleanup"
+  },
+  "fp": {
+    "canonical": "False Positive",
+    "confidence": 1.0,
+    "times_seen": 1,
+    "source": "manual_merge_cleanup"
+  },
+  "false negative (fn)": {
+    "canonical": "False Negative",
+    "confidence": 1.0,
+    "times_seen": 1,
+    "source": "manual_merge_cleanup"
+  },
+  "fn": {
+    "canonical": "False Negative",
+    "confidence": 1.0,
+    "times_seen": 1,
+    "source": "manual_merge_cleanup"
+  },
+  "true negative (tn)": {
+    "canonical": "True Negative",
+    "confidence": 1.0,
+    "times_seen": 1,
+    "source": "manual_merge_cleanup"
+  },
+  "tn": {
+    "canonical": "True Negative",
+    "confidence": 1.0,
+    "times_seen": 1,
+    "source": "manual_merge_cleanup"
+  },
+  "area under the curve (auc)": {
+    "canonical": "Area Under the Curve",
+    "confidence": 1.0,
+    "times_seen": 1,
+    "source": "manual_merge_cleanup"
+  },
+  "yi": {
+    "canonical": "V",
+    "confidence": 1.0,
+    "times_seen": 1,
+    "source": "manual_merge_cleanup"
+  },
+  "kneighbors (knn)": {
+    "canonical": "KNeighbors",
+    "confidence": 1.0,
+    "times_seen": 1,
+    "source": "manual_merge_cleanup"
+  },
+  "1995": {
+    "canonical": "Lang",
+    "confidence": 1.0,
+    "times_seen": 1,
+    "source": "manual_merge_cleanup"
   }
 }
