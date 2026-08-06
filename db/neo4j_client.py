@@ -179,8 +179,8 @@ class Neo4jClient:
                        e.properties AS properties
                 LIMIT 1
             """, type=type, clean_name=clean_name)
-            record = result.single()
-            return dict(record) if record else None
+        record = result.single()
+        return dict(record) if record else None
 
     def get_stale_entities(self, min_confidence: float):
         with self.driver.session() as session:
@@ -227,3 +227,68 @@ class Neo4jClient:
                 ORDER BY entity_count DESC
             """)
             return [dict(record) for record in result]
+
+    def get_entity_by_name(self, name: str, type: str | None = None) -> dict | None:
+        """Exact lookup — used by the entity linker once a canonical name is known."""
+        with self.driver.session() as session:
+            if type:
+                result = session.run("""
+                    MATCH (e:Entity {name: $name, type: $type})
+                    RETURN e.name AS name, e.type AS type, e.domain AS domain,
+                           e.confidence AS confidence, e.properties AS properties
+                    LIMIT 1
+                """, name=name, type=type)
+            else:
+                result = session.run("""
+                    MATCH (e:Entity {name: $name})
+                    RETURN e.name AS name, e.type AS type, e.domain AS domain,
+                           e.confidence AS confidence, e.properties AS properties
+                    LIMIT 1
+                """, name=name)
+            record = result.single()
+            return dict(record) if record else None
+
+    def get_neighbors(self, name: str, type: str | None = None, max_hops: int = 2,
+                       min_confidence: float = 0.0, limit: int = 50,
+                       exclude_relation_types: list[str] | None = None) -> list[dict]:
+        """
+        Walk up to max_hops from a named entity, in either direction, along
+        edges whose confidence clears min_confidence. Returns each reachable
+        entity with the relation chain that connects it and a path_confidence
+        (product of edge confidences — decays fast on purpose).
+
+        exclude_relation_types: canonical relation types to skip entirely
+        (e.g. REFERENTIAL-category ones) — see get_relation_types_by_category.
+        """
+        type_clause = ", type: $type" if type else ""
+        exclude = exclude_relation_types or []
+        with self.driver.session() as session:
+            result = session.run(f"""
+                MATCH (start:Entity {{name: $name{type_clause}}})
+                MATCH path = (start)-[rels*1..{max_hops}]-(end:Entity)
+                WHERE start <> end
+                  AND ALL(r IN rels WHERE r.confidence >= $min_confidence
+                                     AND NOT type(r) IN $exclude)
+                WITH end, rels,
+                     reduce(c = 1.0, r IN rels | c * r.confidence) AS path_confidence
+                RETURN DISTINCT end.name AS name, end.type AS type, end.domain AS domain,
+                       [r IN rels | type(r)] AS relation_chain,
+                       path_confidence,
+                       size(rels) AS hops
+                ORDER BY path_confidence DESC
+                LIMIT $limit
+            """, name=name, type=type, min_confidence=min_confidence, limit=limit, exclude=exclude)
+            return [dict(record) for record in result]
+
+    def get_relation_types_by_category(self, exclude_categories: list[str]) -> list[str]:
+        """
+        Reads ontology_memory.json and returns every canonical relation type
+        whose category is in exclude_categories.
+        """
+        import json
+        with open("ontology_memory.json") as f:  # adjust path to wherever it actually lives
+            ontology = json.load(f)
+        return sorted({
+            entry["canonical"] for entry in ontology.values()
+            if entry.get("category") in exclude_categories
+        })

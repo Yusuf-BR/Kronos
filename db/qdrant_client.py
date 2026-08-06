@@ -252,7 +252,34 @@ class KronosQdrantClient:
                 "similarity": results[0].score
             }
         return None
+    def search_entities(self, embedding: list[float], top_k: int = 5, domain: str | None = None):
+            """
+            Like find_similar_entity_by_embedding, but no type filter and no
+            threshold cutoff — for query-time entity linking, where you don't yet
+            know what type the mention resolves to and want to see all candidates
+            to pick from.
+            """
+            conditions = []
+            if domain:
+                conditions.append(FieldCondition(key="domain", match=MatchValue(value=domain)))
+            filter_ = Filter(must=conditions) if conditions else None
 
+            results = self.client.query_points(
+                collection_name="kronos_entities",
+                query=embedding,
+                query_filter=filter_,
+                limit=top_k
+            ).points
+
+            return [
+                {
+                    "name": r.payload["name"],
+                    "type": r.payload["type"],
+                    "domain": r.payload.get("domain"),
+                    "score": r.score
+                }
+                for r in results
+            ]
     def find_nearest_entity_candidate(
         self,
         embedding: list[float],
@@ -313,3 +340,33 @@ class KronosQdrantClient:
             type_filter=type_filter,
             domain_filter=domain
         )
+# Add this method to the KronosQdrantClient class in db/qdrant_client.py
+
+def search_entities(self, embedding: list[float], top_k: int = 5, domain: str | None = None):
+    """
+    Like find_similar_entity_by_embedding, but no type filter and no
+    threshold cutoff — for query-time entity linking, where you don't yet
+    know what type the mention resolves to and want to see all candidates
+    to pick from (unlike ingestion, which needs a single confident match).
+    """
+    conditions = []
+    if domain:
+        conditions.append(FieldCondition(key="domain", match=MatchValue(value=domain)))
+    filter_ = Filter(must=conditions) if conditions else None
+
+    results = self.client.query_points(
+        collection_name="kronos_entities",
+        query=embedding,
+        query_filter=filter_,
+        limit=top_k
+    ).points
+
+    return [
+        {
+            "name": r.payload["name"],
+            "type": r.payload["type"],
+            "domain": r.payload.get("domain"),
+            "score": r.score
+        }
+        for r in results
+    ]

@@ -164,7 +164,7 @@
   "ml": {
     "canonical": "Machine learning",
     "confidence": 1.0,
-    "times_seen": 2,
+    "times_seen": 10,
     "source": "referee"
   },
   "dl": {
@@ -2558,7 +2558,7 @@
   "tom mitchell": {
     "canonical": "Tom Mitchell",
     "confidence": 1.0,
-    "times_seen": 7,
+    "times_seen": 11,
     "source": "embedding"
   },
   "learning system": {
@@ -2990,7 +2990,7 @@
   "backpropagation": {
     "canonical": "BACKPROPAGATION",
     "confidence": 1.0,
-    "times_seen": 10,
+    "times_seen": 14,
     "source": "embedding"
   },
   "world wide web": {
@@ -6974,7 +6974,7 @@
   "gradient descent rule": {
     "canonical": "Gradient descent rule",
     "confidence": 1.0,
-    "times_seen": 7,
+    "times_seen": 13,
     "source": "embedding"
   },
   "sigmoid unit": {
