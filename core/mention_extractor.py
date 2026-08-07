@@ -21,7 +21,9 @@ from utils.quota import groq_quota, QuotaExhaustedError
 
 logger = logging.getLogger(__name__)
 
-MENTION_EXTRACTION_PROMPT = """Extract the key entities, concepts, technologies, people, or organizations mentioned or implied in this question. Return ONLY a JSON array of short strings, nothing else — no explanation, no markdown fences.
+MENTION_EXTRACTION_PROMPT = """Extract the key entities, concepts, technologies, people, or organizations that this question is actually asking about. Return ONLY a JSON array of short strings, nothing else — no explanation, no markdown fences.
+
+{context_block}If the question uses a pronoun or implicit reference (e.g. "it", "its", "that", "this") pointing to something from the conversation above, resolve ONLY that specific reference to its real name — do not pull in other entities from the prior conversation that the current question doesn't actually mention or ask about. Extract based on what THIS question needs, not everything discussed previously.
 
 Question: {question}
 
@@ -34,15 +36,17 @@ class MentionExtractor:
     def __init__(self):
         self.client = Groq(api_key=config.GROQ_API_KEY)
         self.model = config.EXTRACTOR_GROQ_MODEL_FAST
+    
+    def extract(self, question: str, context: str = "") -> list[str]:
+        context_block = f"Conversation so far:\n{context}\n\n" if context else ""
 
-    def extract(self, question: str) -> list[str]:
         def _call():
-            # EXTRACTOR_GROQ_MODEL_FAST is the 8B tier, so large_model=False
-            # — matches ExtractorAgent's single-chunk fast-path call.
             groq_quota.acquire(agent_name="MentionExtractor", large_model=False)
             response = self.client.chat.completions.create(
                 model=self.model,
-                messages=[{"role": "user", "content": MENTION_EXTRACTION_PROMPT.format(question=question)}],
+                messages=[{"role": "user", "content": MENTION_EXTRACTION_PROMPT.format(
+                    context_block=context_block, question=question
+                )}],
                 temperature=0.0,
                 max_tokens=200,
             )
