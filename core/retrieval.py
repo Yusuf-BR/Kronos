@@ -14,7 +14,7 @@ from core.mention_extractor import MentionExtractor
 from db.neo4j_client import Neo4jClient
 from db.qdrant_client import KronosQdrantClient
 from agents.alias_memory import AliasMemory
-
+import time
 logger = logging.getLogger(__name__)
 
 DEFAULT_MAX_HOPS = 2
@@ -50,9 +50,13 @@ class Retriever:
         max_graph_facts: int = 20
     ) -> dict:
         max_hops = max(1, min(max_hops, 3))
+        timings = {}
 
+        t0 = time.perf_counter()
         linked_entities = self.linker.link_all(mentions, domain=domain)
+        timings["entity_linking_s"] = round(time.perf_counter() - t0, 3)
 
+        t0 = time.perf_counter()
         graph_facts_by_key = {}
         for entity in linked_entities:
             neighbors = self.neo4j.get_neighbors(
@@ -61,6 +65,8 @@ class Retriever:
                 exclude_relation_types=self.noisy_relation_types
             )
             for n in neighbors:
+                if n["name"] == entity["name"]:
+                    continue
                 key = (entity["name"], n["name"])
                 fact = {
                     "anchor": entity["name"],
@@ -73,8 +79,11 @@ class Retriever:
                 if key not in graph_facts_by_key or fact["score"] > graph_facts_by_key[key]["score"]:
                     graph_facts_by_key[key] = fact
         graph_facts = list(graph_facts_by_key.values())
+        timings["graph_traversal_s"] = round(time.perf_counter() - t0, 3)
 
+        t0 = time.perf_counter()
         chunk_hits = self.qdrant.search(query, top_k=top_k_chunks, domain_filter=domain)
+        timings["vector_search_s"] = round(time.perf_counter() - t0, 3)
 
         graph_facts.sort(key=lambda f: f["score"], reverse=True)
         graph_facts = graph_facts[:max_graph_facts]
@@ -83,20 +92,25 @@ class Retriever:
         if not linked_entities:
             logger.info("  No entities linked — falling back to pure vector search")
 
+        timings["total_s"] = round(sum(timings.values()), 3)
+
         return {
             "linked_entities": linked_entities,
             "graph_facts": graph_facts,
             "chunk_hits": chunk_hits,
+            "timings": timings,
         }
 
     def ask(self, question: str, domain: str | None = None, **kwargs) -> dict:
-        """
-        End-to-end: extract mentions from the raw question, then retrieve.
-        Use this once you trust mention extraction; use retrieve() directly
-        when you want to pass a hand-picked mention list (as in testing).
-        """
+        t0 = time.perf_counter()
         mentions = self.mention_extractor.extract(question)
-        return self.retrieve(question, mentions, domain=domain, **kwargs)
+        mention_extraction_s = round(time.perf_counter() - t0, 3)
+        result = self.retrieve(question, mentions, domain=domain, **kwargs)
+        result["timings"]["mention_extraction_s"] = mention_extraction_s
+        result["timings"]["total_s"] = round(result["timings"]["total_s"] + mention_extraction_s, 3)
+        return result
+
+
 
     def close(self):
         self.neo4j.close()
