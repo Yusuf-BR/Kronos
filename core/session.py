@@ -7,6 +7,7 @@ demo; would need a real store (redis, sqlite, or LangGraph's own
 checkpointer) before this runs behind a multi-worker API.
 """
 import logging
+from collections import deque
 from core.retrieval import Retriever
 from core.synthesis import Synthesizer
 
@@ -20,7 +21,7 @@ class ConversationSession:
         self.retriever = retriever
         self.synthesizer = synthesizer
         self.session_id = session_id
-        self.turns = []  # [{question, mentions, linked_entities, answer}, ...]
+        self.turns = deque(maxlen=MAX_HISTORY_TURNS)
 
     def _build_context_block(self) -> str:
         """
@@ -31,11 +32,14 @@ class ConversationSession:
         resolving references to things only named in a prior *answer*
         (not asked about directly) for much tighter, predictable
         extraction on the common case.
+
+        No manual slicing needed — self.turns is a deque(maxlen=
+        MAX_HISTORY_TURNS), so it already never holds more than that many
+        turns; iterating the whole thing is already bounded.
         """
         if not self.turns:
             return ""
-        recent = self.turns[-MAX_HISTORY_TURNS:]
-        return "\n".join(f"Q: {t['question']}" for t in recent)
+        return "\n".join(f"Q: {t['question']}" for t in self.turns)
 
     def _last_linked_entity_names(self) -> list[str]:
         if not self.turns:

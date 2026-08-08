@@ -59,7 +59,18 @@ def test_context_block_respects_history_limit():
     # Oldest turns should have been dropped, most recent should remain
     assert "Question number 0" not in block
     assert f"Question number {MAX_HISTORY_TURNS + 2}" in block
-
+    
+def test_turns_storage_is_bounded():
+    """self.turns must not grow unboundedly — a deque(maxlen=...) should
+    evict the oldest turn once the cap is reached, not just cap what's
+    fed into the prompt while still holding everything in memory."""
+    session = _fake_session()
+    for i in range(MAX_HISTORY_TURNS + 5):
+        session.turns.append({
+            "question": f"q{i}", "mentions": [], "linked_entities": [], "answer": "",
+        })
+    assert len(session.turns) == MAX_HISTORY_TURNS
+    assert session.turns[0]["question"] == f"q{5}"  # oldest 5 evicted
 
 # ── Integration: real end-to-end coreference resolution ─────────────────
 
