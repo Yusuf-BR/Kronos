@@ -5,3 +5,5 @@ __pycache__/
 logs/
 data/
 .venv/
+*.json
+docs/

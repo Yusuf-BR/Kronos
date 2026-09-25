@@ -37,7 +37,7 @@ class Config:
     EXTRACTOR_MODEL = EXTRACTOR_GEMINI_MODEL
 
     # Groq (small/medium docs — best quality, tight daily cap)
-    EXTRACTOR_GROQ_MODEL = "llama-3.3-70b-versatile"
+    EXTRACTOR_GROQ_MODEL = os.getenv("EXTRACTOR_GROQ_MODEL", "openai/gpt-oss-120b")
     EXTRACTOR_GROQ_MODEL_FAST = "llama-3.1-8b-instant"
 
     # Mistral — NO daily cap (2.25M tokens/min, 5 req/sec). This is now
@@ -51,7 +51,7 @@ class Config:
 
     # Reconciler
     RECONCILER_BACKEND = os.getenv("RECONCILER_BACKEND", "mistral")
-    RECONCILER_MODEL = "llama-3.3-70b-versatile"
+    RECONCILER_MODEL = os.getenv("RECONCILER_MODEL", "openai/gpt-oss-120b")
     RECONCILER_MISTRAL_MODEL = os.getenv("RECONCILER_MISTRAL_MODEL", "mistral-small-2506")
 
     # Librarian / Curator / Analyst

@@ -94,7 +94,7 @@ class ExtractorAgent:
         self.groq_model_fast = None
         if getattr(config, "GROQ_API_KEY", None):
             self.groq_client = Groq(api_key=config.GROQ_API_KEY)
-            self.groq_model = getattr(config, "EXTRACTOR_GROQ_MODEL", "llama-3.3-70b-versatile")
+            self.groq_model = getattr(config, "EXTRACTOR_GROQ_MODEL", "GPT OSS 120B")
             self.groq_model_fast = getattr(config, "EXTRACTOR_GROQ_MODEL_FAST", "llama-3.1-8b-instant")
 
         # Gemini kept available as a manual/opt-in backend only. It is
